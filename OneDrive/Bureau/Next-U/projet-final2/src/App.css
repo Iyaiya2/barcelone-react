@@ -1,9 +1,10 @@
+/* src/App.css */
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40vmin; /* Utilise une unité relative pour la hauteur */
   pointer-events: none;
 }
 
@@ -20,19 +21,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Taille de police responsive */
   color: white;
+  padding: 20px; /* Ajout de padding pour un meilleur espacement */
+  box-sizing: border-box; /* Pour s'assurer que le padding ne dépasse pas la largeur de l'élément */
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none; /* Supprime le soulignement pour un look plus propre */
 }
 
+.App-link:hover {
+  text-decoration: underline; /* Ajoute un effet au survol */
+}
+
+/* Animation de logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px; /* Moins de padding sur les petits écrans */
+    font-size: calc(8px + 2vmin); /* Ajuste la taille de police pour les petits écrans */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Réduit la taille du logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin); /* Réduire davantage la taille de la police */
+  }
+
+  .App-logo {
+    height: 25vmin; /* Réduit encore la taille du logo pour les petits écrans */
   }
 }
